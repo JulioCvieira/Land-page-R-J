@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Righteous&family=Roboto&family=Roboto+Serif:opsz,wght@8..144,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quando&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', serif;
+    
+}
+
+/*criando barra de navegação*/
+
+body {
+    margin-top: -18.7px;
+    background: rgb(110, 116, 114);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+nav {
+    width: 50%;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    color: aliceblue;
+    font-size: 23px;
+    transition: ease-in-out 0.3;
+}
+
+a:hover {
+    color: rgb(250, 0, 33);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.logo1 {
+    padding: 15px;
+}
+
+.barra {
+    width: 100%;
+    background: rgba(12, 10, 10, 0.24);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.wpp {
+    transition: ease-in-out 0.3;
+}
+
+.wpp:hover {
+    color: green;
+}
+
+
+/*terminada barra de navegação*/
+
+/*inicio tela principal*/
+
+#inicio {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-shadow: 20px black;
+    background: linear-gradient(68.15deg, #333131 56.62%, #575353 95.61%);
+}
+
+.ajustador-organizador {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.apresentacao {
+    max-width: 760px;
+    color: white;
+    text-shadow: -3px 4px 5px #222, -5px 7px 5px #000;
+    padding: 10px;
+}
+
+.descricao {
+    font-size: 50px;
+    grid-area: descricao;
+}
+
+.name {
+    font-family: 'Sarala', serif;
+    font-size: 80px;
+    color: rgb(250, 0, 33);
+}
+
+.button {
+    display: flex;
+    gap: 10px;
+    width: 479px;
+    height: 85px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 62px;
+    box-shadow: -3px 4px 5px #222, -5px 7px 5px #000;
+    background-color: rgb(250, 0, 33);
+    position: relative;
+}
+
+.button:active {
+    background-color: rgb(253, 67, 92);
+    box-shadow: inset -3px 4px 5px #222;
+}
+
+.face-icon {
+    height: 50px;
+    justify-content: none;
+    position: relative;
+    animation: faceAnimation 2.1s infinite alternate-reverse linear;   
+}
+
+@keyframes faceAnimation {
+    from {
+        top: -5px;
+    }
+    to {
+        top: 5px;
+    }
+}
+
+
+
+.link {
+    font-size: 35px;
+    text-align: center;
+    width: 80%;
+    padding: 12px 0;
+    position: relative;
+    transition: ease-in-out 0.3s;
+}
+
+.link:hover {
+    letter-spacing: 5px;
+    color: white;
+}
+
+.logo-principal {
+    box-shadow: -3px 4px 5px #222, -5px 7px 5px #000;
+    grid-area: logo-principal;
+    position: relative;
+    animation: logoAnimation 2.1s infinite alternate-reverse linear;
+}
+
+@keyframes logoAnimation {
+    from {
+        top: -15px;
+    }
+    to {
+        top: 15px;
+    }
+}
+
+@media (max-width:980px) {
+    
+    #inicio{
+        
+        height: auto;
+    }
+
+    .ajustador-organizador {
+        display: flex;
+        padding: 100px 0;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+   
+
+    .apresentacao {
+        padding: 100px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .facebook {
+        width: 479px;
+        margin-top: 15px;
+    }
+
+    .logo-canto {
+        margin-left: 15px;
+    }
+
+    .barra-navegacao {
+        margin-right: 15px;
+    }
+
+}
+
+@media (max-width:600px) {
+   .ajustador-organizador{
+        display: flex;
+        justify-content: center;
+    }
+    .ajustador-organizador {
+        max-width: 300px;
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-areas:  
+        "logo-principal"
+        "descricao";
+        line-height: 35px;
+    }
+
+    #inicio {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo-principal {
+        display: flex;
+        justify-content: center;
+    }
+
+    .descricao {
+        font-size: 20px;
+    }
+
+    .button {
+        height: auto;
+        width: auto;
+    }
+
+    .face-icon {
+        height: 40px;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    .logo-canto, .barra-navegacao {
+        margin: 0;
+    }
+
+    .logo-canto {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .barra{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .barra-conteiner{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .barra-conteiner{
+        margin: 0;
+    }
+    .barra-conteiner {
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    .logo-canto{
+        width: 100%
+    }
+
+    .barra-navegacao ul {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .barra-navegacao ul a {
+        font-size: 35px;
+    }
+
+    /* configurando menu mobile */
+    .barra {
+        display: block;
+        position: fixed;
+        top: -100vh;
+        transition: ease 0.3s;
+    }
+    
+    .close-menu-label::after {
+        content:'≡';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 3rem;
+        line-height:3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    /* ✕ */
+    .close-menu:checked~.barra {
+        top: 0;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        display: block;
+        content: '✕';
+    }
+
+    .barra ul li a{
+        font-size: 25px;
+    }
+
+    .barra {
+        background: rgba(0, 0, 0, 0.527);
+    }
+
+}
+
+
+/*tela principal terminada*/
+
+/*criando sobre a empresa*/
+
+
+
+#sobre {
+    display: flex;
+    padding: 197px 20px;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(68.15deg, #333131 56.62%, #575353 95.61%);
+}
+
+.imagens {
+    height: 25vw;
+    width: 80%;
+    left: 10%;
+    max-height: 200px;
+    position: relative;
+    cursor: pointer;
+    transition: ease 1s;
+}
+
+.imagens:hover {
+    transform: scale(1.05);
+}
+
+.imagens img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 800ms;
+}
+
+.imagens .img-sobre {
+    opacity: 1;
+}
+
+
+h2 {
+    font-family: 'Sarala', serif;
+    font-size: 80px;
+    text-align: center;
+    color: rgb(250, 0, 33);
+    text-shadow: -3px 4px 5px #222, -5px 7px 5px #000;
+}
+
+.sobre-empresa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.sobre-empresa p {
+    text-indent: 30px;
+    font-size: 30px;
+    max-width: 800px;
+    color: white;
+    text-shadow: -3px 4px 5px #222, -5px 7px 5px #000;
+}
+
+@media (max-width:980px) {
+    .ajuste-sobre {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .imagens {
+        margin-right: 60px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .ajuste-sobre p {
+        font-size: 15px;
+    }
+    .sobre-empresa p {
+        text-indent: 0;
+    }
+}
+
+@media(max-width:600px){
+
+    
+    #sobre {
+        max-width: 100%;
+        align-items: center;
+        
+    }
+
+    .imagens {
+        margin-right: 0;
+    }
+
+}
+
+/*sobre empresa terminada*/
+
+/*criando footer*/
+
+.footer {
+    background: rgba(255, 0, 0, 0.219);
+    width: 100%;
+    z-index: -1;
+    backdrop-filter: blur(10px);
+}
+
+.footer-conteiner {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contato-creditos {
+    color: white;
+    font-family: 'Sarala', serif;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.links-links1 {
+    display: flex;
+    gap: 25px;
+}
+
+.logo-footer {
+    height: 52px;
+    width: 52px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.logo-footer:hover {
+    transform: rotate(-360deg);
+}
+
+
+@media (max-width:980px) {
+    .contato-creditos{
+        text-align: center;
+    }
+    
+    .footer-conteiner {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+   
+}
+
+/*footer terminado*/
